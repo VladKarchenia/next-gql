@@ -22,14 +22,12 @@ export const Header: React.FC<IHeaderProps> = ({
     <HeaderNavWrapper
       theme={theme}
       hasShadow={{ "@initial": false, "@md": hasShadow }}
+      css={{ paddingX: "$16" }}
     >
       <HeaderNavItem justify="start">
-        <Spacer size={16} horizontal />
         <Logo />
       </HeaderNavItem>
-
       <HeaderNavItem>{children}</HeaderNavItem>
-
       <HeaderNavItem justify="end">
         <Box>123</Box>
       </HeaderNavItem>

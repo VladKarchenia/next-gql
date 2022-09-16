@@ -5,7 +5,7 @@ import { CSS } from "@/config";
 
 import { ResponsiveProp } from "../types";
 
-// export * from "./animations";
+export * from "./animations";
 // export * from "./boxShadows";
 export * from "./classes";
 export * from "./colors";
