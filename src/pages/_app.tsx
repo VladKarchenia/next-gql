@@ -11,3 +11,5 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 }
 
 export default appWithTranslation(MyApp);
+
+// start = NODE_ENV=production node server.js

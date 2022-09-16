@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npm run start",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "next dev",
     "lint": "next lint"
   },
   "dependencies": {
@@ -23,7 +23,8 @@
     "polished": "^4.2.2",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "url-join": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "17.0.25",
