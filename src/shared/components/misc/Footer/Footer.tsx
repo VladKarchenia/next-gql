@@ -7,8 +7,8 @@ export interface IFooterProps {}
 export const Footer: React.FC<IFooterProps> = () => {
   return (
     <footer
-      className={atomicClassNames({ backgroundColor: "neutrals-4" })}
-      data-plum-nav="footer"
+      className={atomicClassNames({ backgroundColor: "neutrals-0" })}
+      data-nav="footer"
     >
       <Spacer size={{ "@initial": 48, "@md": 64 }} />
       <GridContainer>Footer</GridContainer>

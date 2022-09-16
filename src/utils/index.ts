@@ -5,7 +5,7 @@ export * from "./styles";
 export * from "./types";
 
 // export * from "./createContext";
-// export * from "./generateHash";
+export * from "./generateHash";
 // export * from "./mergeRefs";
 // export * from "./scrollBy";
 // export * from "./scrollTo";

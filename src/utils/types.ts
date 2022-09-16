@@ -1,12 +1,12 @@
-export type PlumComponentProps<T extends React.ElementType> = React.ComponentProps<T> & {
+export type ComponentProps<T extends React.ElementType> = React.ComponentProps<T> & {
   as?: keyof JSX.IntrinsicElements;
   className?: string;
 };
 
 type Modify<T, R> = Omit<T, keyof R> & R;
 
-export type PlumFormComponentProps<T extends React.ElementType, R> = Omit<
-  Modify<PlumComponentProps<T>, R>,
+export type FormComponentProps<T extends React.ElementType, R> = Omit<
+  Modify<ComponentProps<T>, R>,
   "ref" | "hasError" | "prefix"
 >;
 

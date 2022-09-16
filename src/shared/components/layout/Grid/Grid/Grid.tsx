@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PlumComponentProps, ResponsiveProp } from "@/utils/types";
+import { ComponentProps, ResponsiveProp } from "@/utils/types";
 import { mergeCSSObjects, getStyleFromResponsiveProp } from "@/utils/styles";
 
 import { getGridCoords } from "../utils";
@@ -14,7 +14,7 @@ export type GridCoord = GridTrack | ResponsiveProp<GridTrack>;
 /**
  * If needed we can expose an API to easily create "grid areas"
  */
-export interface IGridProps extends PlumComponentProps<typeof SGrid> {
+export interface IGridProps extends ComponentProps<typeof SGrid> {
   columns?: GridCoord;
   rows?: GridCoord;
 }

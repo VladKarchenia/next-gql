@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PlumComponentProps, ResponsiveProp } from "@/utils/types";
+import { ComponentProps, ResponsiveProp } from "@/utils/types";
 import { mergeCSSObjects, getStyleFromResponsiveProp } from "@/utils/styles";
 
 import { getGridCoords } from "../utils";
@@ -11,7 +11,7 @@ export type GridItemTrack = string | undefined;
 
 export type GridItemCoord = GridItemTrack | ResponsiveProp<GridItemTrack>;
 
-export interface IGridItemProps extends PlumComponentProps<typeof SGridItem> {
+export interface IGridItemProps extends ComponentProps<typeof SGridItem> {
   column?: GridItemCoord;
   row?: GridItemCoord;
 }

@@ -1,10 +1,10 @@
 import React from "react";
 
-import { PlumComponentProps } from "@/utils/types";
+import { ComponentProps } from "@/utils/types";
 
 import { SDivider } from "./Divider.styles";
 
-export interface IDividerProps extends PlumComponentProps<typeof SDivider> {}
+export interface IDividerProps extends ComponentProps<typeof SDivider> {}
 
 export const Divider = ({ ...props }: IDividerProps) => {
   return <SDivider {...props}></SDivider>;

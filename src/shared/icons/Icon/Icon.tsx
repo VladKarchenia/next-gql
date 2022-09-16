@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useMemo } from "react";
 
-import { PlumComponentProps } from "@/utils/types";
+import { ComponentProps } from "@/utils/types";
 
 import { generateHash } from "@/utils";
 
@@ -13,7 +13,7 @@ const defaultDimensions = {
   width: 24,
 };
 
-export interface IIconProps extends PlumComponentProps<typeof SIcon> {
+export interface IIconProps extends ComponentProps<typeof SIcon> {
   height?: number;
   width?: number;
 
@@ -33,23 +33,35 @@ type WithIconReturn<P extends IIconProps> = (props: P) => JSX.Element | null;
 
 type IconFnOrString<P extends IIconProps> = ((props: P) => string) | string;
 
-export const withIcon = <P extends IIconProps>(icon: IconFnOrString<P>): WithIconReturn<P> => {
+export const withIcon = <P extends IIconProps>(
+  icon: IconFnOrString<P>
+): WithIconReturn<P> => {
   const Icon = (props: P) => {
-    const { height, width, dimensions = defaultDimensions, fixedSize = false, ...rest } = props;
+    const {
+      height,
+      width,
+      dimensions = defaultDimensions,
+      fixedSize = false,
+      ...rest
+    } = props;
 
     const [cache, setCache] = useIconCache();
 
     const iconStr = typeof icon === "function" ? icon(props) : icon;
 
-    const id = useMemo(() => "icon-" + generateHash(iconStr).toString(16), [iconStr]);
+    const id = useMemo(
+      () => "icon-" + generateHash(iconStr).toString(16),
+      [iconStr]
+    );
 
     /**
      * Prevent icon from accessing/updating the icon cache provider and from adding ids to svg icons,
      * otherwise it will result in multiple icons with the same id attribute
      */
-    const isCacheProviderDefined = typeof cache !== "undefined" && typeof setCache !== "undefined";
+    const isCacheProviderDefined =
+      typeof cache !== "undefined" && typeof setCache !== "undefined";
 
-    const isIconCached = cache?.[id];
+    const isIconCached = cache?.[id as keyof typeof cache];
 
     useEffect(() => {
       if (!isIconCached && isCacheProviderDefined) {

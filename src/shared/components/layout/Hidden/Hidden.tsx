@@ -2,13 +2,13 @@ import React from "react";
 
 import { breakpoints } from "@/config";
 
-import { PlumComponentProps } from "@/utils/types";
+import { ComponentProps } from "@/utils/types";
 import { atomicClassNames } from "@/utils";
 
 import { SHidden } from "./Hidden.styles";
 
 type Breakpoint = keyof typeof breakpoints;
-export interface IHiddenProps extends PlumComponentProps<typeof SHidden> {
+export interface IHiddenProps extends ComponentProps<typeof SHidden> {
   above?: Breakpoint;
   below?: Breakpoint;
 }

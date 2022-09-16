@@ -1,9 +1,9 @@
 import React from "react";
-import { PlumComponentProps } from "@/utils";
+import { ComponentProps } from "@/utils";
 import { SHeaderNav } from "./Header.styles";
 
 export interface IHeaderNavWrapper
-  extends PlumComponentProps<typeof SHeaderNav> {}
+  extends ComponentProps<typeof SHeaderNav> {}
 
 export const HeaderNavWrapper = React.forwardRef<
   HTMLElement,

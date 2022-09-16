@@ -1,8 +1,8 @@
 import React from "react";
-import { PlumComponentProps } from "@/utils";
+import { ComponentProps } from "@/utils";
 import { Flex } from "@/shared/components";
 
-interface IHeaderNavItem extends PlumComponentProps<typeof Flex> {}
+interface IHeaderNavItem extends ComponentProps<typeof Flex> {}
 
 export const HeaderNavItem: React.FC<IHeaderNavItem> = ({
   children,

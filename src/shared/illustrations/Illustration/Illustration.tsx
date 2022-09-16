@@ -1,8 +1,8 @@
 import React from "react";
-import { PlumComponentProps } from "@/utils/types";
+import { ComponentProps } from "@/utils/types";
 import { SBaseIllustration } from "./Illustration.styles";
 
-export interface IIllustrationProps extends PlumComponentProps<typeof SBaseIllustration> {
+export interface IIllustrationProps extends ComponentProps<typeof SBaseIllustration> {
   dataTestId?: string;
 
   scribble?: boolean;

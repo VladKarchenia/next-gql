@@ -14,6 +14,7 @@ import {
   Button,
   Flex,
   FooterContainer,
+  FormCheckbox,
   Grid,
   GridContainer,
   GridItem,
@@ -140,8 +141,12 @@ const About = () => {
                     <form onSubmit={methods.handleSubmit(onSubmit)}>
                       <Spacer size={24} />
                       <Stack space={16} dividers>
-                        {["apple", "orange", "lemon"].map((i) => (
-                          <Box key={i}>{i}</Box>
+                        {["apple", "orange", "lemon"].map((item) => (
+                          <FormCheckbox
+                            key={item}
+                            label={item}
+                            {...methods.register(item)}
+                          />
                         ))}
                       </Stack>
 

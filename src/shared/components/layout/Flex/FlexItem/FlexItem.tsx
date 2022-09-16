@@ -1,10 +1,10 @@
 import React from "react";
 
-import { PlumComponentProps } from "@/utils";
+import { ComponentProps } from "@/utils";
 
 import { SFlexItem } from "./FlexItem.styles";
 
-export interface IFlexItemProps extends PlumComponentProps<typeof SFlexItem> {}
+export interface IFlexItemProps extends ComponentProps<typeof SFlexItem> {}
 
 export const FlexItem = React.forwardRef<HTMLDivElement, IFlexItemProps>((props, ref) => (
   <SFlexItem ref={ref} {...props} />

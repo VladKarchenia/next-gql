@@ -2,7 +2,7 @@ import * as React from "react";
 import cx from "classnames";
 import deepmerge from "deepmerge";
 
-import { PlumComponentProps, ResponsiveProp } from "@/utils/types";
+import { ComponentProps, ResponsiveProp } from "@/utils/types";
 import { atomicClassNames } from "@/utils/styles";
 
 import { Colors } from "@/config/theme/types";
@@ -12,7 +12,7 @@ import { SCopy } from "./Copy.styles";
 export type CopyIntent = "cta" | "detail" | "copy";
 
 export interface ICopyProps
-  extends Omit<PlumComponentProps<typeof SCopy>, "color"> {
+  extends Omit<ComponentProps<typeof SCopy>, "color"> {
   color?: Colors | ResponsiveProp<Colors>;
 
   intent?: CopyIntent;

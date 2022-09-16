@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { PlumComponentProps } from "@/utils/types";
+import { ComponentProps } from "@/utils/types";
 
 import { IconDots } from "@/shared/icons";
 
@@ -8,7 +8,7 @@ import { Copy, ICopyProps } from "@/shared/components";
 
 import { SButton, SButtonIcon, SButtonSpinner } from "./Button.styles";
 
-export interface IButtonProps extends PlumComponentProps<typeof SButton> {
+export interface IButtonProps extends ComponentProps<typeof SButton> {
   icon?: JSX.Element;
 
   id?: string;

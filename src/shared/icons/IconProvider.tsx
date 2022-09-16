@@ -16,7 +16,7 @@ export const IconProvider = ({ children }: React.PropsWithChildren<{}>) => {
 
   return (
     <IconCache.Provider value={[cache, setCache]}>
-      <svg className="plum-svg-sprite">
+      <svg className="svg-sprite">
         <defs>
           {Object.keys(cache).map((id) => (
             <g

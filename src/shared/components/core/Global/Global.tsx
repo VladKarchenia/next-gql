@@ -96,14 +96,14 @@ const globalStyles = (backgroundColor?: Colors) => {
       fontWeight: 500,
     },
 
-    ".plum-svg-sprite": {
+    ".svg-sprite": {
       display: "none",
     },
 
     // 100vh fix in mobile webkit
     // https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/
     // Alternative: https://pqina.nl/blog/how-to-prevent-scrolling-the-page-on-ios-safari/
-    "html[data-plum-fullscreen-page]": {
+    "html[data-fullscreen-page]": {
       height: "-webkit-fill-available",
 
       body: {

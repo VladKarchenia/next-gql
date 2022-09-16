@@ -1,7 +1,7 @@
 import * as React from "react";
 import cx from "classnames";
 
-import { PlumComponentProps, ResponsiveProp } from "@/utils/types";
+import { ComponentProps, ResponsiveProp } from "@/utils/types";
 import { atomicClassNames } from "@/utils/styles";
 
 import { Colors } from "@/config/theme/types";
@@ -9,7 +9,7 @@ import { Colors } from "@/config/theme/types";
 import { STitle } from "./Title.styles";
 
 export interface ITitleProps
-  extends Omit<PlumComponentProps<typeof STitle>, "color"> {
+  extends Omit<ComponentProps<typeof STitle>, "color"> {
   color?: Colors | ResponsiveProp<Colors>;
 
   dataTestid?: string;

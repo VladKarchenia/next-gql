@@ -1,9 +1,9 @@
 import React from "react";
-import { PlumComponentProps } from "@/utils";
+import { ComponentProps } from "@/utils";
 import { IconLogo } from "@/shared/icons";
 import { SLogo } from "./Logo.styles";
 
-interface ILogo extends PlumComponentProps<typeof SLogo> {
+interface ILogo extends ComponentProps<typeof SLogo> {
   href?: string;
 }
 
@@ -11,7 +11,7 @@ export const Logo: React.FC<ILogo> = ({ color, href = "/" }) => {
   return (
     <a
       aria-haspopup="false"
-      aria-label="Plum Guide"
+      aria-label="Logo name"
       role="button"
       tabIndex={0}
       href={href}
