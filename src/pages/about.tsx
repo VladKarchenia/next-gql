@@ -38,8 +38,8 @@ export const DashboardBox = styled("div", {
   "@md": {
     backgroundColor: "$neutrals-0",
     border: "1px solid $neutrals-4",
-    paddingY: 32,
-    paddingX: 40,
+    paddingY: "$32",
+    paddingX: "$40",
   },
 
   "& > *": {
